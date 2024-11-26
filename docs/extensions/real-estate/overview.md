@@ -2,9 +2,17 @@
 
 Real Estate is an [extension](https://www.espocrm.com/extensions/real-estate/) for EspoCRM.
 
-Features:
+In this article:
 
-* [Properties](properties.md)
-* [Requests](requests.md)
-* [Locations](locations.md)
-* [Property Matching](property-matching.md)
+* [Properties](#properties)
+* [Requests](#requests)
+* [Locations](#locations)
+* [Property Matching](#property-matching)
+
+## Properties
+
+## Requests 
+
+## Locations
+
+## Property Matching
