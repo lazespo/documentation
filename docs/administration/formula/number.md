@@ -24,7 +24,6 @@ Converts a numeric VALUE into a string formatted according to a specific format 
 
     `number\format(10.1, 0)` – results 10.
 
-
 ## number\abs
 
 `number\abs(VALUE)`
