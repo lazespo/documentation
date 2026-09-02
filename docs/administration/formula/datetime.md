@@ -21,7 +21,6 @@ Date and date-time values are represented as strings. E.g. `'2021-01-01'`, `'202
 * [datetime\addYears](#datetimeaddyears)
 * [datetime\closest](#datetimeclosest)
 
-
 ## datetime\today
 
 `datetime\today()`
