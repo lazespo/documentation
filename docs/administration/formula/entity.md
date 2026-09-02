@@ -20,7 +20,6 @@ the target record is the record is being created. For Workflow's conditions, the
 * [entity\countRelated](#entitycountrelated)
 * [entity\getLinkColumn](#entitygetlinkcolumn)
 
-
 ## entity\isNew
 
 `entity\isNew()`
