@@ -6,13 +6,13 @@ In this guide we will show how to configure a virtual host on Nginx for EspoCRM 
 
 To create this file, open a terminal and run the command:
 
-```
+```bash
 sudo cp /etc/nginx/sites-available/default /etc/nginx/sites-available/espocrm.conf
 ```
 
 Now, open this file (`/etc/nginx/sites-available/espocrm.conf`) and modify the code following the format printed below (some settings may be different depending on your configuration).
 
-```
+```nginx
 server {
     listen 80 default_server;
     listen [::]:80 default_server;
@@ -87,19 +87,19 @@ You need to change `/path-to-espo` to the absolute path of your EspoCRM instance
 
 Create a symbolic link:
 
-```
+```bash
 sudo ln -s /etc/nginx/sites-available/espocrm.conf /etc/nginx/sites-enabled/
 ```
 
 Run this command to check if everything is fine:
 
-```
+```bash
 sudo nginx -t
 ```
 
 And restart Nginx server:
 
-```
+```bash
 sudo service nginx restart
 ```
 
@@ -107,7 +107,7 @@ sudo service nginx restart
 
 If you added a local domain, you have to configure it on your local computer (not on the server). For Ubuntu, open the file `/etc/hosts` and add the line:
 
-```
+```hosts
 192.168.1.1 espocrm.local  # specify the IP address of your Nginx server
 ```
 
