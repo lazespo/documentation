@@ -24,7 +24,7 @@ Check whether a record with specified criteria exists.
 
 `record\exists(ENTITY_TYPE, [FILTER])`
 
-With filter applied. As of v9.2. More [info](../formula.md#filter) about filters. 
+With filter applied. As of v9.2. More [info](../formula.md#filter) about filters.
 
 !!! examples
 
@@ -191,7 +191,6 @@ Relate with column data (as of v9.3.):
 
 `record\relate(ENTITY_TYPE, ID, LINK, FOREIGN_ID, COLUMN_DATA)`
 
-
 !!! examples
 
     `record\relate('Account', $accountId, 'opportunities', $opportunityId)`
@@ -205,8 +204,9 @@ Relate with column data (as of v9.3.):
     ```
 
 !!! note
+
     This function won't work in *Before save script* when applied for the current record. Use an after-save Workflow rule instead.
-    
+
 ## record\unrelate
 
 `record\unrelate(ENTITY_TYPE, ID, LINK, FOREIGN_ID)`
@@ -235,7 +235,6 @@ Creates a new record of entity type with attributes specified as key-value pairs
 
     `$id = record\create('MyEntityType', 'emailAddress', 'SOME@ADDRESS.com', 'assignedUserId', 'SOME-USER-ID')`
 
-
 !!! example
 
     ```
@@ -261,7 +260,6 @@ Updates an existing record with attributes specified as key-value pairs or an ob
     `record\update('Meeting', 'SOME-MEETING-ID', 'status', 'Held', 'assignedUserId', 'SOME-USER-ID')`
 
 It will update the meeting with ID `SOME-MEETING-ID`, and set `status = 'Held'`, `assignedUserId = 'SOME-USER-ID'`.
-
 
 !!! example
 
