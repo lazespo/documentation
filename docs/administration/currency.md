@@ -32,8 +32,8 @@ Currency exchange rates are available under: Administration > Currency > Currenc
 
 Currency exchange rates can be viewed or edited by:
 
-- Admin users
-- Users with access to the Currency scope
+* Admin users
+* Users with access to the Currency scope
 
 A rate entry has a mandatory *Date* field. The rate with the latest non-future date is used as the current rate.
 
@@ -97,7 +97,7 @@ Request to update specific rates: `PUT api/v1/CurrencyRate`, with JSON payload.
 
 Payload example:
 
-```
+```json
 {
     "EUR": 1.11,
     "UAH": 0.037
@@ -162,6 +162,6 @@ Rebuild is required after modifying an existing field. Can take long if the tabl
 
 If the parameters *precision* and *scale* are not defined, values 13, 4 are used.
 
-In the application, amount values will be represented as strings (rather than floats). 
+In the application, amount values will be represented as strings (rather than floats).
 
 In templates (PDF, email), you need to use the *numberFormat* helper to print currency values.
