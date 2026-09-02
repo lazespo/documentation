@@ -6,7 +6,7 @@ These instructions are supplementary to the [server configuration](server-config
 
 To install all necessary libraries, run these commands in a terminal:
 
-```
+```bash
 sudo apt-get update
 sudo apt-get install php-mysql php-json php-gd php-zip php-imap php-mbstring php-curl php-exif php-ldap
 sudo phpenmod imap mbstring
@@ -17,7 +17,7 @@ sudo service nginx restart
 
 Nginx config file example:
 
-```
+```nginx
 server {
     listen 80 default_server;
     listen [::]:80 default_server;
@@ -96,7 +96,7 @@ What this config does:
 
 Config file path: `/etc/nginx/sites-available/YOUR_SITE`. If you don’t have this file, you have to create it. For this, open the terminal and run the command:
 
-```
+```bash
 sudo cp /etc/nginx/sites-available/default /etc/nginx/sites-available/espocrm.conf
 ```
 
@@ -104,13 +104,13 @@ For more information on how to configure the new virtual host on Nginx, read thi
 
 Run this command in the terminal to check if everything is fine:
 
-```
+```bash
 sudo nginx -t
 ```
 
 If so, run the command to restart the nginx server:
 
-```
+```bash
 sudo service nginx restart
 ```
 
