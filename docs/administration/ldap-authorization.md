@@ -11,13 +11,13 @@ In this guide, we will show how to configure LDAP authorization for EspoCRM.
 
 Go to your LDAP server and create a base DN for the EspoCRM users like:
 
-```
+```ldap
 cn=espo-users,ou=users,dc=espo,dc=local
 ```
 
 We have to create a system user that will have access to the users DN (“cn=espo-users,ou=users,dc=espo,dc=local”). So, the full DN for this system user will be:
 
-```
+```ldap
 cn=LDAP User,cn=espo-users,ou=users,dc=espo,dc=local
 ```
 
@@ -74,7 +74,8 @@ User has been authenticated and automatically created in the EspoCRM.
 
 This error occurs when the wrong `Account Canonical Form` or `Username Attribute` are specified.
 The correct values are:
-- Account Canonical Form: `Principal` or `Username`. 
-- Username Attribute: `sAMAccountName`
+
+* Account Canonical Form: `Principal` or `Username`. 
+* Username Attribute: `sAMAccountName`
 
 The full Active Directory configuration, see in the [documentation](ldap-authorization-for-ad.md).
