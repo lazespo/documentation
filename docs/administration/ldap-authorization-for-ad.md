@@ -20,5 +20,4 @@ Example of configuration LDAP authorization for the Active Directory server. The
 - User Email Address Attribute: `mail`
 - User Phone Number Attribute: `telephoneNumber`
 
-
 ![1](../_static/images/administration/ldap-authorization/ldap-configuration-for-ad.png)
