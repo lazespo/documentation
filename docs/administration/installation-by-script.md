@@ -494,7 +494,7 @@ nano data/php/espocrm.ini
 
 with the content:
 
-```
+```ini
 expose_php = Off
 display_errors = Off
 display_startup_errors = Off
@@ -553,7 +553,7 @@ nano data/php/fpm/zzz-espocrm.conf
 
 with the content:
 
-```
+```ini
 [www]
 pm.max_children = 30
 ```
