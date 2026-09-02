@@ -36,7 +36,6 @@ Steps:
 
 1\. Create Tracking URL at Campaigns > top-right menu > Tracking URLs.
 
-
 2\. In BPM: Use an *Execute Formula Script* action or *Script Task* to generate a unique and store it in a variable:
 
 ```
