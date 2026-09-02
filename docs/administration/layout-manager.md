@@ -100,7 +100,6 @@ The list of fields available in the list view to search by.
 
 The list of fields available in the Mass Update form.
 
-
 ### Side Panels
 
 Side panels for Detail, Edit, Detail Small, Edit Small forms. Provides the ability to hide or re-order panels. Panels can be colorized by the Style parameter. You can define dynamic-logic conditions that will determine whether the panel is visible.
@@ -147,7 +146,7 @@ For internal users (*regular* & *admin*), a Layout Set is applied through the *D
 
 For *portal* users, the Layout Set is applied through the *Portal* record.
 
-A Layout Set can also be specified for a specific User in the *Layout Set* field. Only *regular* and *admin* users have this field available. 
+A Layout Set can also be specified for a specific User in the *Layout Set* field. Only *regular* and *admin* users have this field available.
 
 !!! note
 
