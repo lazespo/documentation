@@ -6,27 +6,26 @@ This script automatically installs EspoCRM as a Docker-based application, with N
 
 1. Operating system:
 
-  * Ubuntu
-  * Debian
-  * Linux Mint
+    * Ubuntu
+    * Debian
+    * Linux Mint
 
 2. Access via command line.
 
 3. Root or sudo access.
 
-
 ## Installation
 
 To install, first you need to download the script with wget, then run it. See the examples below.
 
-```
+```bash
 wget -N https://github.com/espocrm/espocrm-installer/releases/latest/download/install.sh
 sudo bash install.sh
 ```
 
 ### Installation with SSL/TLS certificate
 
-```
+```bash
 wget -N https://github.com/espocrm/espocrm-installer/releases/latest/download/install.sh
 sudo bash install.sh --ssl
 ```
@@ -100,7 +99,7 @@ Define a password of EspoCRM administrator. Ex. `--admin-password=admin-password
 
 Update the `command.sh` for the existing installation. Ex. `--command`.
 
-#### `--backup-path `
+#### `--backup-path`
 
 A path for the backup. Ex. `--backup-path ="/backup"`.
 
@@ -114,25 +113,25 @@ In order to update the command tool, see [update the command.sh](#update-the-com
 
 In order to display a list of available commands.
 
-```
+```bash
 sudo /var/www/espocrm/command.sh help
 ```
 
 ### Status of services
 
-```
+```bash
 sudo /var/www/espocrm/command.sh status
 ```
 
 ### Restart services
 
-```
+```bash
 sudo /var/www/espocrm/command.sh restart
 ```
 
 ### Start services
 
-```
+```bash
 sudo /var/www/espocrm/command.sh start
 ```
 
@@ -140,31 +139,31 @@ sudo /var/www/espocrm/command.sh start
 
 In order to apply changes in `docker-compose.yml`.
 
-```
+```bash
 sudo /var/www/espocrm/command.sh build
 ```
 
 ### Stop services
 
-```
+```bash
 sudo /var/www/espocrm/command.sh stop
 ```
 
 ### EspoCRM rebuild
 
-```
+```bash
 sudo /var/www/espocrm/command.sh rebuild
 ```
 
 ### EspoCRM upgrade
 
-```
+```bash
 sudo /var/www/espocrm/command.sh upgrade
 ```
 
 ### EspoCRM logs
 
-```
+```bash
 sudo /var/www/espocrm/command.sh logs
 ```
 
@@ -172,7 +171,7 @@ sudo /var/www/espocrm/command.sh logs
 
 Create a full backup of EspoCRM.
 
-```
+```bash
 sudo /var/www/espocrm/command.sh backup "BACKUP_DIRECTORY"
 ```
 
@@ -182,7 +181,7 @@ An example: `sudo /var/www/espocrm/command.sh backup /var/www/espocrm-backup`.
 
 Restore the backup created by the [backup](#backup) command.
 
-```
+```bash
 sudo /var/www/espocrm/command.sh restore "BACKUP_ARCHIVE"
 ```
 
@@ -194,14 +193,14 @@ Restore the backup created by the [backup](#backup) command.
 
 #### 1. Configure the environment
 
-```
+```bash
 wget -N https://github.com/espocrm/espocrm-installer/releases/latest/download/install.sh
 sudo bash install.sh --environment
 ```
 
 #### 2. Restore a backup
 
-```
+```bash
 sudo /var/www/espocrm/command.sh restore "BACKUP_ARCHIVE"
 ```
 
@@ -211,7 +210,7 @@ An example: `sudo /var/www/espocrm/command.sh restore "/var/www/espocrm-backup/2
 
 In order to fix the `Error response from daemon: network external not found`, run:
 
-```
+```bash
 sudo bash install.sh --network
 ```
 
@@ -221,7 +220,7 @@ and then run the `Step 2` again.
 
 Delete old and unnecessary files.
 
-```
+```bash
 sudo /var/www/espocrm/command.sh clean
 ```
 
@@ -229,7 +228,7 @@ sudo /var/www/espocrm/command.sh clean
 
 Import the database from the SQL dump created by `mariadb-dump`, `mysqldump`, `phpMyAdmin`, etc.
 
-```
+```bash
 sudo /var/www/espocrm/command.sh import-sql "PATH/DB.sql"
 ```
 
@@ -239,7 +238,7 @@ An example: `sudo /var/www/espocrm/command.sh import-sql "/var/www/espocrm-backu
 
 Import the database with enabled `DROP TABLE` statement in the SQL dump created by `mariadb-dump`, `mysqldump`, `phpMyAdmin`, etc.
 
-```
+```bash
 sudo /var/www/espocrm/command.sh import-sql --skip-drop "PATH/DB.sql"
 ```
 
@@ -249,7 +248,7 @@ An example: `sudo /var/www/espocrm/command.sh import-sql "/var/www/espocrm-backu
 
 Export the database structure and data into a .sql dump.
 
-```
+```bash
 sudo /var/www/espocrm/command.sh export-sql "PATH"
 ```
 
@@ -261,7 +260,7 @@ Export the single database table structure and data into a .sql dump.
 
 Notice: the database tables have different names than Entities. Ex. `TargetList` entity has the `target_list` table.
 
-```
+```bash
 sudo /var/www/espocrm/command.sh export-table-sql "PATH" "TABLE_NAME"
 ```
 
@@ -271,7 +270,7 @@ An example: `sudo /var/www/espocrm/command.sh export-table-sql "/var/www/espocrm
 
 Generate a new Let's Encrypt certificate. It can be used to create a certificate for the first time or after a domain change.
 
-```
+```bash
 sudo /var/www/espocrm/command.sh cert-generate
 ```
 
@@ -279,7 +278,7 @@ sudo /var/www/espocrm/command.sh cert-generate
 
 Renew an existing Let's Encrypt certificate. It can be used in crontab to automatically renewal.
 
-```
+```bash
 sudo /var/www/espocrm/command.sh cert-renew
 ```
 
@@ -287,7 +286,7 @@ sudo /var/www/espocrm/command.sh cert-renew
 
 Applying a domain change described [here](#change-a-domain-name).
 
-```
+```bash
 sudo /var/www/espocrm/command.sh apply-domain
 ```
 
@@ -297,7 +296,7 @@ Note: This item is relevant only for the Let's Encrypt mode.
 
 Enable automatic certificate renewal. This should be done after moving to another server only.
 
-```
+```bash
 sudo /var/www/espocrm/command.sh cert-cron-add
 ```
 
@@ -307,7 +306,7 @@ Note: This item is relevant only for the Let's Encrypt mode.
 
 Disable automatic certificate renewal. This command should be run after changing the installation mode (ex. to own SSL certificate).
 
-```
+```bash
 sudo /var/www/espocrm/command.sh cert-cron-remove
 ```
 
@@ -315,7 +314,7 @@ sudo /var/www/espocrm/command.sh cert-cron-remove
 
 Add a cronjob for a VoIP Integration extension after configuring the connector (ex. Asterisk).
 
-```
+```bash
 sudo /var/www/espocrm/command.sh voip-cron-add CONNECTOR
 ```
 
@@ -325,7 +324,7 @@ where `CONNECTOR` is your connector ID, ex. `Asterisk`.
 
 Remove a cronjob for a VoIP Integration extension after disabling the connector (ex. Asterisk).
 
-```
+```bash
 sudo /var/www/espocrm/command.sh voip-cron-remove CONNECTOR
 ```
 
@@ -369,15 +368,15 @@ Post installation steps:
 
 2\. Replace the following certificates with your own:
 
-- fullchain.pem
-- privkey.pem
+* fullchain.pem
+* privkey.pem
 
 **Important!**
 Your own certificates have to substitute the existing certificates and must have the same names.
 
 3\. Restart nginx server:
 
-```
+```bash
 /var/www/espocrm/restart.sh espocrm-nginx
 ```
 
@@ -391,21 +390,21 @@ All the actions can be applied to already installed EspoCRM instance.
 
 ### From HTTP to Own SSL/TLS certificate
 
-```
+```bash
 wget -N https://github.com/espocrm/espocrm-installer/releases/latest/download/install.sh
 sudo bash install.sh --ssl --owncertificate --domain=my-espocrm.com
 ```
 
 ### From HTTP to Let's Encrypt certificate
 
-```
+```bash
 wget -N https://github.com/espocrm/espocrm-installer/releases/latest/download/install.sh
 sudo bash install.sh --ssl --letsencrypt --domain=my-espocrm.com --email=email@my-domain.com
 ```
 
 ### From Own SSL/TLS certificate to Let's Encrypt certificate
 
-```
+```bash
 wget -N https://github.com/espocrm/espocrm-installer/releases/latest/download/install.sh
 sudo bash install.sh --ssl --letsencrypt --domain=my-espocrm.com --email=email@my-domain.com
 ```
@@ -414,26 +413,26 @@ sudo bash install.sh --ssl --letsencrypt --domain=my-espocrm.com --email=email@m
 
 1\. Stop your existing EspoCRM instance.
 
-```
+```bash
 sudo /var/www/espocrm/command.sh stop
 ```
 
 2\. Rename your existing directory:
 
-```
+```bash
 mv /var/www/espocrm /var/www/espocrm-old
 ```
 
 3\. Run the installer in the required mode, e.g. `Let's Encrypt certificate` mode:
 
-```
+```bash
 wget -N https://github.com/espocrm/espocrm-installer/releases/latest/download/install.sh
 sudo bash install.sh --ssl --letsencrypt --domain=my-espocrm.com --email=email@my-domain.com
 ```
 
 4\. Copy your existing data to a new installation:
 
-```
+```bash
 rm -rf /var/www/espocrm/data/espocrm
 rm -rf /var/www/espocrm/data/mariadb
 cp -rp /var/www/espocrm-old/data/espocrm /var/www/espocrm/data
@@ -441,12 +440,13 @@ cp -rp /var/www/espocrm-old/data/mariadb /var/www/espocrm/data
 ```
 
 5\. Update your `/var/www/espocrm/docker-compose.yml` file. You have to copy your existing options from `/var/www/espocrm-old/docker-compose.yml` for the services:
-- `espocrm-db`
-- `espocrm`
+
+* `espocrm-db`
+* `espocrm`
 
 6\. Restart services via the command:
 
-```
+```bash
 sudo /var/www/espocrm/command.sh restart
 ```
 
@@ -470,7 +470,7 @@ sudo /var/www/espocrm/command.sh restart
 
 In order to load the latest version of the `command.sh`, run the command:
 
-```
+```bash
 wget -N https://github.com/espocrm/espocrm-installer/releases/latest/download/install.sh
 sudo bash install.sh --command
 ```
@@ -481,13 +481,13 @@ This can be achieved by mounting the PHP configuration file and restarting the c
 
 1\. Login via terminal to your server and open EspoCRM directory `/var/www/espocrm`:
 
-```
+```bash
 cd /var/www/espocrm
 ```
 
 2\. Create the PHP configuration file:
 
-```
+```bash
 mkdir -p data/php; \
 nano data/php/espocrm.ini
 ```
@@ -511,13 +511,13 @@ then press `Ctrl + 0` and `Ctrl + X`
 
 3\. Mount the created PHP configuration file to the container:
 
-```
+```bash
 sudo nano docker-compose.yml
 ```
 
 add `./data/php/espocrm.ini:/usr/local/etc/php/conf.d/espocrm.ini` option for `espocrm` container as displayed below:
 
-```
+```yml
 espocrm:
   ...
   volumes:
@@ -530,7 +530,7 @@ then press `Ctrl + 0` and `Ctrl + X`
 
 4\. Restart the container to apply the changes:
 
-```
+```bash
 sudo ./command.sh restart espocrm
 ```
 
@@ -540,13 +540,13 @@ This can be achieved by mounting the PHP-FPM configuration file and restarting t
 
 1\. Login via terminal to your server and open EspoCRM directory `/var/www/espocrm`:
 
-```
+```bash
 cd /var/www/espocrm
 ```
 
 2\. Create the PHP-FPM configuration file:
 
-```
+```bash
 mkdir -p data/php/fpm; \
 nano data/php/fpm/zzz-espocrm.conf
 ```
@@ -562,13 +562,13 @@ then press `Ctrl + 0` and `Ctrl + X`
 
 3\. Mount the created PHP-FPM configuration file to the container:
 
-```
+```bash
 sudo nano docker-compose.yml
 ```
 
 add `./data/php/fpm/zzz-espocrm.conf:/usr/local/etc/php-fpm.d/zzz-espocrm.conf` option for `espocrm` container as displayed below:
 
-```
+```bash
 espocrm:
   ...
   volumes:
@@ -581,7 +581,7 @@ then press `Ctrl + 0` and `Ctrl + X`
 
 4\. Restart the container to apply the changes:
 
-```
+```bash
 sudo ./command.sh restart espocrm
 ```
 
@@ -589,19 +589,19 @@ sudo ./command.sh restart espocrm
 
 1\. Login via terminal to your server and open EspoCRM directory `/var/www/espocrm`:
 
-```
+```bash
 cd /var/www/espocrm
 ```
 
 2\. Edit the file `./data/nginx/conf.d/default.conf.template`
 
-```
+```bash
 sudo nano ./data/nginx/conf.d/default.conf.template
 ```
 
 3\. Restart the container to apply the changes:
 
-```
+```bash
 sudo ./command.sh restart espocrm-nginx
 ```
 
@@ -609,13 +609,13 @@ sudo ./command.sh restart espocrm-nginx
 
 1\. Login via terminal to your server and open EspoCRM directory `/var/www/espocrm`:
 
-```
+```bash
 cd /var/www/espocrm
 ```
 
 2\. Find and replace the old domain name with the new one in the file `./docker-compose.yml`
 
-```
+```bash
 sudo nano ./docker-compose.yml
 ```
 
@@ -627,7 +627,7 @@ Options to change:
 
 3\. Run the command:
 
-```
+```bash
 sudo ./command.sh apply-domain
 ```
 
@@ -641,7 +641,7 @@ Note: You have to clear your browser cache for this change to take effect.
 
 1\. Export the MySQL database from the corresponding Docker container:
 
-```
+```bash
 sudo mkdir -p /var/www/backup
 cd /var/www/backup
 sudo docker exec -i espocrm-mysql /usr/bin/mysqldump -uroot -pYOUR_ROOT_PASSWORD espocrm > db.sql
@@ -649,18 +649,18 @@ sudo docker exec -i espocrm-mysql /usr/bin/mysqldump -uroot -pYOUR_ROOT_PASSWORD
 
 Notes:
 
-- Replace the YOUR_ROOT_PASSWORD with your MySQL root password.
+* Replace the YOUR_ROOT_PASSWORD with your MySQL root password.
 
 2\. Copy `data` and `custom` folders from *espocrm* directory:
 
-```
+```bash
 sudo cp -a /var/www/espocrm/data/espocrm/data /var/www/backup/data
 sudo cp -a /var/www/espocrm/data/espocrm/custom /var/www/backup/custom
 ```
 
 3\. Install a fresh EspoCRM by a script:
 
-```
+```bash
 cd ~
 wget -N https://github.com/espocrm/espocrm-installer/releases/latest/download/install.sh
 sudo bash install.sh --db-root-password=YOUR_ROOT_PASSWORD --db-password=YOUR_ESPOCRM_DB_PASSWORD --admin-password=YOUR_ADMIN_PASSWORD --clean
@@ -668,19 +668,19 @@ sudo bash install.sh --db-root-password=YOUR_ROOT_PASSWORD --db-password=YOUR_ES
 
 Notes:
 
-- Replace the YOUR_ROOT_PASSWORD with your MySQL root password.
-- Replace the YOUR_ESPOCRM_DB_PASSWORD with your MySQL espocrm user password.
-- Replace the YOUR_ADMIN_PASSWORD with your EspoCRM admin user password.
+* Replace the YOUR_ROOT_PASSWORD with your MySQL root password.
+* Replace the YOUR_ESPOCRM_DB_PASSWORD with your MySQL espocrm user password.
+* Replace the YOUR_ADMIN_PASSWORD with your EspoCRM admin user password.
   
 4\. Stop the services:
 
-```
+```bash
 sudo /var/www/espocrm/command.sh stop
 ```
 
 5\. Replace `data` and `custom` folders in the */var/www/espocrm/data/espocrm* directory with the previously exported ones.
 
-```
+```bash
 sudo rm -rf /var/www/espocrm/data/espocrm/data
 sudo rm -rf /var/www/espocrm/data/espocrm/custom
 sudo cp -a /var/www/backup/data /var/www/espocrm/data/espocrm
@@ -691,19 +691,19 @@ sudo cp -a /var/www/backup/custom /var/www/espocrm/data/espocrm
 
 7\. Start the services:
 
-```
+```bash
 sudo /var/www/espocrm/command.sh start
 ```
 
 8\. Import previously exported database to MariaDB container:
 
-```
+```bash
 sudo /var/www/espocrm/command.sh import-sql /var/www/backup/db.sql
 ```
 
 9\. Make a rebuild:
 
-```
+```bash
 sudo /var/www/espocrm/command.sh rebuild
 ```
 
@@ -711,7 +711,7 @@ sudo /var/www/espocrm/command.sh rebuild
 
 ## Troubleshooting
 
-If after upgrading the EspoCRM instance with the [upgrade](#espocrm-upgrade) command you get error 500 in your instance and there is nothing in the logs that could be related to this error, one of the reasons could be a MySQL version upgrade (upgrades automatically). 
+If after upgrading the EspoCRM instance with the [upgrade](#espocrm-upgrade) command you get error 500 in your instance and there is nothing in the logs that could be related to this error, one of the reasons could be a MySQL version upgrade (upgrades automatically).
 
 !!! warning
 
@@ -721,24 +721,24 @@ To solve this problem and gain access to the instance, follow these steps:
 
 1\. Stop the services:
 
-```
+```bash
 sudo /var/www/espocrm/command.sh stop
 ```
 
 2\. In */var/www/espocrm/docker-compose.yaml* file, remove the following line:
 
-```
+```yml
 command: --default-authentication-plugin=mysql_native_password
 ```
 
 3\. Insert the following line in the same place and save changes:
 
-```
+```yml
 command: --mysql-native-password=ON
 ```
 
 4\. Build and start the services:
 
-```
+```bash
 sudo /var/www/espocrm/command.sh build
 ```
