@@ -84,7 +84,7 @@ The list of parameters along with their default values. This is not a full list 
 * `adminNotificationsNewExtensionVersion` – `true` – notifications about new extension versions in admin panel;
 * `emailReminderPortionSize` – `10` – how much email reminders can be sent at once (as of v7.0);
 * `notificationsMaxSize` – `5` – how much in-app notifications is shown when the notification panel is shown up;
-* `notificationsCheckInterval` – `10` – an interval between checks for new notifications (actual only if web socket is not enabled); 
+* `notificationsCheckInterval` – `10` – an interval between checks for new notifications (actual only if web socket is not enabled);
 * `popupNotificationsCheckInterval` – `15` – an interval between checks for new popup notifications (actual only if web socket is not enabled) (as of v7.3.2);
 * `reminderMaxCount` – `10` – a max number of reminders per event (as of v8.3);
 * `notificationGrouping` – `true` – notification grouping (as of v9.2);
@@ -147,7 +147,7 @@ The list of parameters along with their default values. This is not a full list 
 
 #### Brute force prevention for IP address
 
-* `authMaxFailedAttemptNumber` – `10` – if the number of failed login attempts within a specific period exceeds the specified number, then the system won't allow to login; 
+* `authMaxFailedAttemptNumber` – `10` – if the number of failed login attempts within a specific period exceeds the specified number, then the system won't allow to login;
 * `authFailedAttemptsPeriod` – `'60 seconds'` – period taken into account;
 * `authFailedCodeAttemptsPeriod` – `'5 minutes'` – period for checking a number of failed 2FA code check attempts (as of v8.4);
 
@@ -202,7 +202,6 @@ The list of parameters along with their default values. This is not a full list 
 ### Text search
 
 * `textFilterContainsMinLength`  – `4` – actual if *Use 'contains' operator when filtering varchar fields* parameter is enabled;
-
 
 ### PDF
 
