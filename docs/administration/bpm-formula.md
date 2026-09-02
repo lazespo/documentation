@@ -22,7 +22,7 @@ Fetches an attribute value of a target record.
 
 `bpm\createdEntity\attribute(ALIAS_ID, ATTRIBUTE)`
 
-Fetches an attribute value of a record created within a process. 
+Fetches an attribute value of a record created within a process.
 
 Available records:
 
