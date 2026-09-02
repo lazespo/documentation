@@ -4,10 +4,9 @@ You can configure the web server so that the Portal is accessed by a different U
 
 First, you need to set the *Custom URL* field in the Portal record. For example, you can use your domain name `portal.my-company.com` to access the Portal.
 
-
 Config example:
 
-```
+```apache
 DocumentRoot /path_to_espo/public/portal/
 Alias /client/ /path_to_espo/client/
 Alias /api/v1/ /path_to_espo/public/api/v1/
