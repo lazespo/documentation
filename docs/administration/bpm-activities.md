@@ -209,7 +209,6 @@ A created User Task can be canceled by a process. There are two ways:
 
 ![User Task](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/bpm/task-user.png)
 
-
 ----
 
 ## Script Task
