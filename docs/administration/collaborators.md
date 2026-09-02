@@ -13,7 +13,6 @@ Users added as collaborators to a record can view the record, can read the strea
 The Collaborators feature is available for custom entities created via the Entity Manager and
 for the following out-of-the-box entity types: Task, Case, Account, Contact, Lead, Opportunity, Document, Knowledge Base Article and Target List.
 
-
 ## Enabling
 
 The Collaborators feature can be enabled for an entity type in the Entity Manager at:
@@ -47,4 +46,3 @@ Access prerequisites:
 Limitations:
 
 * Portal users cannot be added as collaborators.
-
