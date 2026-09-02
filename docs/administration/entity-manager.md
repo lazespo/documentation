@@ -60,7 +60,7 @@ Parameters:
 * Disabled – check if you don't need this entity type in the system.
 * Text Filter Fields – defines which fields are searched by the main text filter and global search.
 * Status Field – specifies which field (of enum type) will be used to represent the record status; required for the Kanban view.
-* Kanban view – enables the Kanban view mode; the parameter is available only if the Status Field is specified. 
+* Kanban view – enables the Kanban view mode; the parameter is available only if the Status Field is specified.
 * Full-Text Search – enables full-text search; see more [here](../user-guide/text-search.md#full-text-search).
 * Disable record count – the total number won't be displayed on the list view; can decrease loading time when the DB table is big.
 * Color – a color for a quick recognition.
@@ -161,9 +161,9 @@ When an admin user restores a removed record, the associated related records are
 
 Supported relationships:
 
-- one-to-many
-- has-children
-- one-to-one
+* one-to-many
+* has-children
+* one-to-one
 
 When cascade removal is enabled, it's recommended to also enable transactional save for the parent entity type.
 
