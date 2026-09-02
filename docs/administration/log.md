@@ -15,7 +15,7 @@ Log parameters are available in the file `data/config-internal.php`.
 
 Parameters example:
 
-```
+```php
 'logger' => [
   'level' => 'NOTICE', // DEBUG, INFO, NOTICE, WARNING, ERROR
   'maxFileNumber' => 30,
@@ -45,7 +45,7 @@ The feature is known as *App Log*. Config parameter enabling the feature: `logge
 
 It may be convenient to check the logs right from the application UI. The log is available under: Administration > App Log. By default, this feature is disabled – log entries are not created in the database table.
 
-To make log records available in the admin UI, set the *databaseHandler* parameter to true. 
+To make log records available in the admin UI, set the *databaseHandler* parameter to true.
 
 !!! note
 
@@ -63,7 +63,7 @@ Parameter: `sql`.
 
     Not to be enabled on production.
 
-If the parameter *sql* is set to true, all executed SQL queries will be printed to the log. Requires *INFO* or *DEBUG* level. 
+If the parameter *sql* is set to true, all executed SQL queries will be printed to the log. Requires *INFO* or *DEBUG* level.
 
 If *sql* is set to true, and the log level is *NOTICE* or higher, than only failed queries will be logged. As of v8.2.
 
@@ -77,7 +77,7 @@ It's possible to configure the list of handlers Espo should use for logging.
 
 In `data/config-internal.php`:
 
-```
+```php
 'logger' => [
   'level' => 'NOTICE',
   'handlerList' => [
