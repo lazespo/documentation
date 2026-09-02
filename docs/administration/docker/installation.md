@@ -450,39 +450,39 @@ docker run \
 
 These are one-time environment variables used only for a fresh installation. If you need to define configuration options on container startup, see the [Config Environments](#config-environments).
 
-#### ESPOCRM_DATABASE_PLATFORM
+**ESPOCRM_DATABASE_PLATFORM**
 
 Database platform. The possible values: `Mysql` or `Postgresql`. The default value is `Mysql`.
 
-#### ESPOCRM_DATABASE_HOST
+**ESPOCRM_DATABASE_HOST**
 
 Database host name for EspoCRM. The default value is `espocrm-db`.
 
-#### ESPOCRM_DATABASE_PORT
+**ESPOCRM_DATABASE_PORT**
 
 Database port for EspoCRM. The default value is empty.
 
-#### ESPOCRM_DATABASE_NAME
+**ESPOCRM_DATABASE_NAME**
 
 Database name for EspoCRM. The default value is `espocrm`.
 
-#### ESPOCRM_DATABASE_USER
+**ESPOCRM_DATABASE_USER**
 
 Database user for EspoCRM. The default value is `espocrm`.
 
-#### ESPOCRM_DATABASE_PASSWORD
+**ESPOCRM_DATABASE_PASSWORD**
 
 Database password for EspoCRM. The default value is `password`.
 
-#### ESPOCRM_ADMIN_USERNAME
+**ESPOCRM_ADMIN_USERNAME**
 
 User name for an administrator of EspoCRM. The default value is `admin`.
 
-#### ESPOCRM_ADMIN_PASSWORD
+**ESPOCRM_ADMIN_PASSWORD**
 
 User password for an administrator of EspoCRM. The default value is `password`.
 
-#### ESPOCRM_SITE_URL
+**ESPOCRM_SITE_URL**
 
 The URL of EspoCRM. This option is very important for normal operating of EspoCRM. Examples: `http://192.168.0.100:8080`, `http://my-crm.local`.
 
@@ -518,25 +518,29 @@ There are additional options to change the `logger`:
 
 For more details, visit [documentation](../log.md).
 
-### Allowed types:
+### Allowed types
 
 #### String
-```
+
+```yml
 ESPOCRM_CONFIG_WEB_SOCKET_URL: "wss://my-espocrm.com:8080"
 ```
 
 #### Integer
-```
+
+```yml
 ESPOCRM_CONFIG_EMAIL_MESSAGE_MAX_SIZE: 10
 ```
 
 #### Boolean
-```
+
+```yml
 ESPOCRM_CONFIG_USE_WEB_SOCKET: "true"
 ```
 
 #### Null
-```
+
+```yml
 ESPOCRM_CONFIG_CURRENCY_DECIMAL_PLACES: "null"
 ```
 
@@ -812,7 +816,7 @@ Notes:
 - Replace the `DATABASE_ROOT_PASSWORD` with your MySQL root password.
 - Replace the `DATABASE_ESPOCRM_PASSWORD` with your MySQL `espocrm` user's password.
 
-```
+```bash
 sudo docker exec -i mysql mysql --user=root -p -e "
   ALTER USER IF EXISTS 'root'@'localhost' IDENTIFIED WITH caching_sha2_password BY 'DATABASE_ROOT_PASSWORD';
   ALTER USER IF EXISTS 'root'@'%' IDENTIFIED WITH caching_sha2_password BY 'DATABASE_ROOT_PASSWORD';
@@ -824,7 +828,7 @@ sudo docker exec -i mysql mysql --user=root -p -e "
 
 3\. Restart and build `mysql` container:
 
-```
+```bash
 sudo docker stop mysql && sudo docker rm mysql
 docker compose up -d --build
 ```
