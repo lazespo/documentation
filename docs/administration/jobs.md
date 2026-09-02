@@ -141,7 +141,6 @@ php command.php run-job JobName
 
 where JobName is an internal name of the job you want to run.
 
-
 !!! example
 
     ```bash
