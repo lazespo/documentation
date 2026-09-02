@@ -6,7 +6,7 @@
 
 ## list
 
-`list(VALUE-1 [, ... VALUE-N])` 
+`list(VALUE-1 [, ... VALUE-N])`
 
 Returns array. Values are passed as arguments of the function.
 
