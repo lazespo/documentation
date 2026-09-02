@@ -12,7 +12,6 @@ An administrator needs to enable 2FA at Administration > Authentication and sele
 
 [Time-based One-time Password](https://en.wikipedia.org/wiki/Time-based_One-time_Password_algorithm) is an algorithm that generates a one-time password which uses the current time as a source of uniqueness.
 
-
 !!! warning
 
     The server time must be correct. Otherwise, authentication won't work.
