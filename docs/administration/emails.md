@@ -35,7 +35,7 @@ Group Email Accounts can be accessed at Administration > Group Email Accounts.
 
 Only administrator can setup Group Email Accounts. Group Email Accounts can be used for both receiving and sending emails.
 
-The *Teams* field determines which teams incoming emails will be assigned to. 
+The *Teams* field determines which teams incoming emails will be assigned to.
 
 If a Group Email Account has the SMTP enabled and it's checked as **shared**, then users will be able to use this account when sending emails. Access to the account for sending is controlled by Roles through the *Group Email Account* permission. If the permission level is set to *teams*, then users of the teams selected in the *Teams* field of the Group Email Account will be able to use that Group Email Account.
 
@@ -51,7 +51,7 @@ One Group Email Account needs to be picked as the system default account. All no
 
 ### Email-to-Case
 
-There is an option to make the system create a new Case record from each email incoming to a specific Group Email Account. Cases can be distributed to users of a specific Team. There are three available distribution rules: *Direct Assignment*, *Round-Robin* and *Less-Busy*. 
+There is an option to make the system create a new Case record from each email incoming to a specific Group Email Account. Cases can be distributed to users of a specific Team. There are three available distribution rules: *Direct Assignment*, *Round-Robin* and *Less-Busy*.
 
 !!! note
 
