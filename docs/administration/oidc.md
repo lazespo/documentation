@@ -16,7 +16,7 @@ Features:
 * The ability to choose a claim that will be used as a username.
 * Fallback login method. The ability to use the default Espo method. Can be enabled for admins or for both regular users and admins.
 * For admins, the OIDC method can be disabled so that only the fallback method is allowed.
-* Logout redirect. When a user is logging out from Espo, the identity provider session is cleared. 
+* Logout redirect. When a user is logging out from Espo, the identity provider session is cleared.
 * Backchannel logout. The ability to forcibly log out a user from Espo. Available under `api/v1/backchannelLogout` API endpoint.
 
 Details:
@@ -30,10 +30,11 @@ Details:
 
 1. Create an application in your identity provider.
 2. In EspoCRM at Administration > Authentication, select the *OIDC* method. Below, on the same form, a *OIDC* panel will appear.
-  * Copy the *Client ID* and the *Client Secret* from the identity provider to Espo.
-  * Copy the *Authorization Redirect URI* from Espo and add it to a corresponding field on the identity provider.
-  * Copy required endpoints (URLs) from the identity provider to Espo.
-  * Save the form in Espo.
+
+* Copy the *Client ID* and the *Client Secret* from the identity provider to Espo.
+* Copy the *Authorization Redirect URI* from Espo and add it to a corresponding field on the identity provider.
+* Copy required endpoints (URLs) from the identity provider to Espo.
+* Save the form in Espo.
 
 ## Team mapping
 
