@@ -58,7 +58,6 @@ Unsets a value by a KEY.
 
 Checks whether an OBJECT has a value set by a KEY. Returns a boolean.
 
-
 ## object\cloneDeep
 
 `object\cloneDeep(OBJECT)`
