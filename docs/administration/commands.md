@@ -15,19 +15,19 @@ search:
 
 ## List of available commands
 
-```
+```bash
 bin/command
 ```
 
 ## Clear cache
 
-```
+```bash
 php clear_cache.php
 ```
 
 ## Rebuild
 
-```
+```bash
 php rebuild.php
 ```
 
@@ -37,7 +37,7 @@ Clears cache, rebuilds database and other things.
 
 *As of v7.4.*
 
-```
+```bash
 bin/command rebuild --hard
 ```
 
@@ -49,7 +49,7 @@ Recommended to have a database backup before running hard rebuild.
 
 ## Changing user password
 
-```
+```bash
 bin/command set-password [username]
 ```
 
@@ -57,7 +57,7 @@ Where `[username]` is a user name, e.g. `admin`.
 
 ## Upgrade
 
-```
+```bash
 bin/command upgrade
 ```
 
@@ -69,31 +69,31 @@ See additional parameters [here](upgrading.md#additional-parameters).
 
 Installing or upgrading:
 
-```
+```bash
 bin/command extension --file="path/to/extension/package.zip"
 ```
 
 Uninstalling:
 
-```
+```bash
 bin/command extension -u --name="Extension Name"
 ```
 
 Uninstalling by ID:
 
-```
+```bash
 bin/command extension -u --id="extension-ID"
 ```
 
 List all extensions:
 
-```
+```bash
 bin/command extension -l
 ```
 
 ## Running job
 
-```
+```bash
 bin/command run-job JobName
 ```
 
@@ -101,7 +101,7 @@ Where *JobName* is an internal name of the job you want to run.
 
 !!! example
 
-    ```
+    ```bash
     bin/command run-job Cleanup
     bin/command run-job ProcessMassEmail
     ```
@@ -110,13 +110,13 @@ Where *JobName* is an internal name of the job you want to run.
 
 Print the current version:
 
-```
+```bash
 bin/command version
 ```
 
 ## Setting user password
 
-```
+```bash
 bin/command set-password {username}
 ```
 
@@ -126,7 +126,7 @@ Where `{username}` is a user name, e.g. `admin`.
 
 *As of v7.4.*
 
-```
+```bash
 bin/command create-admin-user {username}
 ```
 
@@ -140,7 +140,7 @@ See more detail [here](import.md#console-commands).
 
 ## App info
 
-```
+```bash
 bin/command app-info
 ```
 
@@ -150,7 +150,7 @@ With this command you can get some information about the application (container 
 
 *As of v8.1.*
 
-```
+```bash
 bin/command update-app-timestamp
 ```
 
@@ -160,7 +160,7 @@ Updates the app timestamp to the current time. When an Espo instance is updated 
 
 *As of v10.0.*
 
-```
+```bash
 bin/command populate-scheduled-jobs
 ```
 
@@ -168,7 +168,7 @@ Creates all default scheduled jobs if they don't exist. Can be used when install
 
 ## Rebuild category paths
 
-```
+```bash
 bin/command rebuild-category-paths {EntityType}
 ```
 
@@ -176,7 +176,7 @@ Rebuilds category paths. For example, for DocumentFolder, WorkflowCategory. May 
 
 ## Populate array values
 
-```
+```bash
 bin/command populate-array-values {EntityType} {field}
 ```
 
@@ -188,13 +188,13 @@ Populates entries in the `array_value` table for a specific field based on the c
 
 Print a config parameter value:
 
-```
+```bash
 bin/command config:get {param}
 ```
 
 Print in JSON:
 
-```
+```bash
 bin/command config:get {param} --json
 ```
 
@@ -204,16 +204,15 @@ Note: In the examples, `{param}` is a placeholder, curly braces should not be us
 
 *As of v10.0.*
 
-
 Set a value (implies string type):
 
-```
+```bash
 bin/command config:set {param} {value}
 ```
 
 Set with type:
 
-```
+```bash
 bin/command config:set {param} true --type=bool
 ```
 
@@ -221,13 +220,13 @@ Supported types: `string`, `bool`, `int`, `float`, `json`, `auto`. If the type i
 
 Set a value passed in JSON:
 
-```
+```bash
 bin/command config:set {param} [\"one\", \"two\"] --type=json
 ```
 
 Set a nested parameter:
 
-```
+```bash
 bin/command config:set database.host localhost
 ```
 
