@@ -5,7 +5,7 @@ Developers can also add other providers by implementing `Espo\Core\FileStorage\S
 
 When switching to an external file storage, it's recommended to disable caching for image thumbs by setting in `data/config.php`:
 
-```
+```php
 'thumbImageCacheDisabled' => true,
 ```
 
@@ -13,7 +13,7 @@ When switching to an external file storage, it's recommended to disable caching 
 
 Parameters need to be set in `data/config-internal.php`:
 
-```
+```php
   'awsS3Storage' => [
     'bucketName' => 'BUCKET_NAME',
     'path' => 'OPTIONAL_PATH_WHERE_FILES_WILL_BE_STORED',
@@ -27,7 +27,7 @@ Parameters need to be set in `data/config-internal.php`:
 
 In `data/config.php`:
 
-```
+```php
   'defaultFileStorage' => 'AwsS3',
 ```
 
