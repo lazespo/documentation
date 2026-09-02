@@ -45,7 +45,6 @@ For both, it's **highly recommended** to turn on processing jobs **in parallel**
 
     Parallel processing is not supported in a Windows environment.
 
-
 ### Cron
 
 The Cron is easy to configure, it's supported by most hosting providers. See how to configure cron [here](server-configuration.md#setting-up-crontab).
@@ -67,7 +66,7 @@ Daemon setup is available only in Unix-like operating systems. Requires *pcntl* 
 
 Command to start the daemon using **nohup**:
 
-```
+```bash
 nohup php /path/to/espocrm/daemon.php &
 ```
 
@@ -77,7 +76,7 @@ Service configuration file: `/etc/systemd/system/espocrm-daemon.service`
 
 Configuration (file content):
 
-```
+```ini
 [Unit]
 Description=EspoCRM Daemon Service
 Requires=mysql.service
@@ -98,13 +97,13 @@ WantedBy=default.target
 
 Command to get the service to start on boot:
 
-```
+```bash
 systemctl enable espocrm-daemon.service
 ```
 
 Command to start the service:
 
-```
+```bash
 systemctl start espocrm-daemon.service
 ```
 
@@ -136,15 +135,16 @@ To run a specific job manually in CLI
 
 Command:
 
-```
+```bash
 php command.php run-job JobName
 ```
+
 where JobName is an internal name of the job you want to run.
 
 
 !!! example
 
-    ```
+    ```bash
     php command.php run-job Cleanup
     php command.php run-job ProcessMassEmail
     ```
@@ -163,7 +163,7 @@ Jobs available out of the box:
 
 To print all available jobs run:
 
-```
+```bash
 bin/command app-info --jobs
 ```
 
@@ -171,7 +171,7 @@ Some jobs (CheckEmailAccounts, CheckInboundEmails) require specifying `--target-
 
 !!! example
 
-    ```
+    ```bash
     bin/command run-job CheckEmailAccounts --target-id={email_account_id}
     ```
 
