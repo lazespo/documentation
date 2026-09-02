@@ -36,10 +36,10 @@ This dashlet allows users to display records of any entity type.
 
 Parameters:
 
-- Primary Filter – for example, a user can select *Open* filter to display only open Tasks.
-- Additional Filters (known as Bool filters) – for example, a user can add *Only My* filter to display only records assigned to them, or *Shared* filter to display records where they added as a collaborator.
-- Order By and Order
-- Layout
+* Primary Filter – for example, a user can select *Open* filter to display only open Tasks.
+* Additional Filters (known as Bool filters) – for example, a user can add *Only My* filter to display only records assigned to them, or *Shared* filter to display records where they added as a collaborator.
+* Order By and Order
+* Layout
 
 ### My Activities
 
@@ -47,8 +47,8 @@ Displays user's upcoming activities, such as Meetings, Calls, Tasks, and entity 
 
 Parameters:
 
-- Next X Days – number of days into the future for which activities are displayed.
-- Include Shared – to include tasks where the user is added as s collaborator.
+* Next X Days – number of days into the future for which activities are displayed.
+* Include Shared – to include tasks where the user is added as s collaborator.
 
 ### Iframe
 
@@ -56,7 +56,7 @@ Provides the ability to display external site in an Iframe.
 
 Parameters:
 
-- URL
+* URL
 
 ### Memo
 
@@ -68,9 +68,9 @@ Displays the user's calendar.
 
 Parameters:
 
-- Mode – the calendar mode.
-- What to display – what activity types to display.
-- Teams – optionally, to display activities of specific teams.
+* Mode – the calendar mode.
+* What to display – what activity types to display.
+* Teams – optionally, to display activities of specific teams.
 
 ### Stream
 
@@ -78,7 +78,7 @@ Displays the user's stream.
 
 Parameters:
 
-- Don't show own records
+* Don't show own records
 
 ### My Inbox
 
@@ -90,9 +90,9 @@ A sales pipeline chart based on Opportunities.
 
 Parameters:
 
-- Date Filter
-- Group by last reached stage
-- Team (optional)
+* Date Filter
+* Group by last reached stage
+* Team (optional)
 
 ### Sales by Month
 
@@ -100,7 +100,7 @@ A sales by month chart based on Opportunities.
 
 Parameters:
 
-- Date Filter
+* Date Filter
 
 ### Opportunities by Lead Source
 
@@ -108,7 +108,7 @@ A chart.
 
 Parameters:
 
-- Date Filter
+* Date Filter
 
 ### Opportunities by Stage
 
@@ -116,7 +116,7 @@ A chart.
 
 Parameters:
 
-- Date Filter
+* Date Filter
 
 ## See also
 
