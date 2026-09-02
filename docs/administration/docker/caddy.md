@@ -8,7 +8,7 @@ To integrate Caddy with EspoCRM, you can use the Docker Compose environment. You
 
 2\. Create `docker-compose.yml` file in that directory:
 
-#### docker-compose.yml
+**docker-compose.yml**
 
 ```yml
 services:
@@ -122,7 +122,7 @@ volumes:
 
 #### Caddyfile
 
-```
+```caddy
 YOUR_DOMAIN {
     reverse_proxy espocrm:80
 
@@ -142,6 +142,6 @@ YOUR_DOMAIN {
 
 4\. Now, spin up the containers with the CLI command:
 
-```
+```bash
 docker compose up -d
 ```
