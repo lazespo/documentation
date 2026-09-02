@@ -21,7 +21,6 @@ Returns true if LIST contains VALUE. Can be used for Array and Multi-Enum fields
 
 Adds one or more elements to the end of an array and returns the new array.
 
-
 !!! warning
 
     An array argument is not passed by reference. You need to re-assign the array to a function result.
