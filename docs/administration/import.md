@@ -98,7 +98,7 @@ It's also possible to automatically relate imported records by a *Foreign* field
 
 Run import:
 
-```
+```bash
 php command.php import --id={import-id}
 ```
 
@@ -106,19 +106,19 @@ The import must be created via the UI before. It should have *Run Manually* para
 
 Resume failed import (from the last processed row):
 
-```
+```bash
 php command.php import --id={import-id} --resume
 ```
 
 Revert import:
 
-```
+```bash
 php command.php import --id={import-id} --revert
 ```
 
 Import file:
 
-```
+```bash
 php command.php import --file=path/to/csv --params-id={import-id}
 ```
 
