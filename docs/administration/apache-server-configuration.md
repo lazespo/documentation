@@ -67,7 +67,7 @@ sudo service apache2 restart
 
 To enable .htaccess support, add or edit the server configuration file. It can be:
 
-* `/etc/apache2/apache2.conf` 
+* `/etc/apache2/apache2.conf`
 * `/etc/httpd/conf/httpd.conf`
 * `/etc/apache2/sites-available/ESPO_VIRTUAL_HOST.conf`
 
@@ -105,7 +105,6 @@ RewriteBase /REQUEST_URI/api/v1/
 
 where *REQUEST_URI* is a part of URL, e.g. for `https://example.com/espocrm/`, REQUEST_URI is *'espocrm'*.
 
-
 ## Enable HTTP AUTHORIZATION support (only for FastCGI)
 
 FastCGI does not support HTTP AUTHORIZATION by default. If you use FastCGI, you have to enable it in your VirtualHost or `/etc/apache2/apache2.conf` (or httpd.conf) by adding the following code:
@@ -135,4 +134,3 @@ To check which module is currently being used, run this command and find the mod
 ```bash
 apache2ctl -M
 ```
-
