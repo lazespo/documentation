@@ -6,7 +6,7 @@ First, you need to set the Custom URL field in the Portal record. For example, y
 
 Config example:
 
-```
+```nginx
 server {
     listen 80 default_server;
     listen [::]:80 default_server;
