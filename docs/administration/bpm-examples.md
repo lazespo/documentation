@@ -22,18 +22,18 @@ Included examples:
 
 ## Screenshot-only examples
 
-#### Example 1
+### Example 1
 
 ![Example 1](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/bpm/example-1.png)
 
-#### Example 2
+### Example 2
 
 ![Example 2](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/bpm/example-2.png)
 
-#### Example 3
+### Example 3
 
 ![Example 3](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/bpm/example-3.png)
 
-#### Example 4
+### Example 4
 
 ![Example 4](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/bpm/example-4.png)
