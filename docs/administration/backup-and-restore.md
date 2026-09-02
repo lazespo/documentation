@@ -27,8 +27,8 @@ bash ./backup.sh PATH_TO_ESPOCRM BACKUP_PATH
 
 where
 
- * `PATH_TO_ESPOCRM` is a path to installed EspoCRM directory
- * `BACKUP_PATH` is a path to backup directory
+* `PATH_TO_ESPOCRM` is a path to installed EspoCRM directory
+* `BACKUP_PATH` is a path to backup directory
 
 For Ubuntu server it is:
 
@@ -158,7 +158,7 @@ sudo bash backup-docker-container.sh CONTAINER_NAME ./BACKUP_DIR
 
 Backups can be scheduled on the host by adding the following entry to the crontab:
 
-```
+```bash
 0 1 * * * sudo bash /opt/scripts/backup-docker-container.sh CONTAINER_NAME /backup/espocrm >> /backup/espocrm/backup.log 2>&1
 ```
 
