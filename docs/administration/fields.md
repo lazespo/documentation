@@ -43,20 +43,19 @@ Field types not available for creating directly:
 * Required – whether the field is mandatory; user won't be able to save a record w/o filling the field;
 * Audited – field changes will be stored in stream and available in the Audit Log;
 * Read-only – a field value can't be specified, but can be calculated by formula or workflow rule;
-* Read-only After Create – a field value can be specified only when creating a record, after that the field will became read-only; 
+* Read-only After Create – a field value can be specified only when creating a record, after that the field will became read-only;
 * Default – a value pre-filled when creating a new record;
 * Disable Inline Edit – may be useful when using Dynamic Logic;
 * Tooltip Text – information about the field for users (Markdown is supported);
 * Not Lockable – if enabled, the field is not locked when the record is locked.
 
 !!! note
-    
+
     For most fields, the default value is set as the database default value. Therefore, when you create a new field with a default value, the database system automatically applies this value to all existing records.
 
 !!! note
 
     When the read-only parameter is enabled for a *link* or *link-multiple* field, it won't be possible to create a related record from the relationship panel. It happens because the ID of the current record is passed in the link field.
-
 
 ## Dynamic Logic
 
@@ -225,7 +224,6 @@ Parameters:
 * Display as List – each value will be displayed in a new line;
 * Pattern – a regular expression to check a field value against.
 
-
 ## Checklist
 
 A list of checkboxes.
@@ -236,7 +234,6 @@ Parameters:
 * Options Reference – options from another field to re-use (as of v7.5);
 * Is Sorted – to sort a list alphabetically;
 * Max Item Count – a validation: how many items can be checked;
-
 
 ## Array
 
@@ -303,7 +300,6 @@ Parameters:
 * Max File Size (Mb) – a validation;
 * Accept – which file types can be accepted; see [info](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/file#Unique_file_type_specifiers) about file types.
 
-
 ## Image
 
 For image uploading.
@@ -313,7 +309,6 @@ Parameters:
 * Preview Size – defines a size of an image displayed on the detail/list view;
 * Max File Size (Mb) – a validation;
 * Capture – Specifies which camera to use for capture of image data. Options: Empty, User or Environment. As of v10.0.
-  
 
 ## Attachment-Multiple
 
