@@ -159,7 +159,7 @@ Adds YEARS to a date or datetime VALUE. YEARS can be negative. Returns a modifie
 
 Returns the closest date or datetime to VALUE based on passed arguments.
 
-TYPE can be one of the following values: 'time', 'minute', 'hour', 'date', 'month', 'dayOfWeek'. TARGET is an integer value or a string value. 
+TYPE can be one of the following values: 'time', 'minute', 'hour', 'date', 'month', 'dayOfWeek'. TARGET is an integer value or a string value.
 IS_PAST means to find the closest in the past. If TIMEZONE is omitted, then the default timezone is used.
 
 !!! example
