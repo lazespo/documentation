@@ -61,7 +61,7 @@ To show details and parameters of a certain flowchart element you need to click 
 
 Available under Administration > Processes. An administrator can also add the Processes tab to the navigation bar.
 
-A Process represents a business process instance. When it's initiated, it gets the status *Started*. When the Process is finished, it gets the status *Ended*. 
+A Process represents a business process instance. When it's initiated, it gets the status *Started*. When the Process is finished, it gets the status *Ended*.
 
 A Process is executed according to its Flowchart. The Flowchart of a Process can't be changed after the Process is started.
 
@@ -84,7 +84,7 @@ The execution of a Process is visualized with colors highlighting statuses of fl
 
 ![Process execution](../_static/images/administration/bpm/process-execution.png)
 
-**Only one Process** for the same target record and Flowchart can be active at the same time. It means that if you have multiple Start Events, once one of them is triggered (the process is started), other Start Events will be ignored while the Process is active. 
+**Only one Process** for the same target record and Flowchart can be active at the same time. It means that if you have multiple Start Events, once one of them is triggered (the process is started), other Start Events will be ignored while the Process is active.
 
 Usually Processes start their execution flow from a Start Event (green colored circle). One Process Flowchart can have multiple Start Events.
 
@@ -100,7 +100,7 @@ Ended, stopped and interrupted Processes can be *reactivated* (from the dropdown
 
 ### Access control
 
-Only administrators can create or edit Flowcharts. With Roles it's possible to allow regular users to view Flowcharts, and view or edit Processes. Note that a user needs also to have access to the Process Flowchart scope to be able to view Process Flowchart details. 
+Only administrators can create or edit Flowcharts. With Roles it's possible to allow regular users to view Flowcharts, and view or edit Processes. Note that a user needs also to have access to the Process Flowchart scope to be able to view Process Flowchart details.
 
 ## Flowchart Elements
 
@@ -139,6 +139,6 @@ Through the UI, there is the ability to check conditions for the following recor
 * Records created by the Process via tasks;
 * User Task records, what allows checking a task resolution.
 
-It's also possible to define conditions with [Formula](formula.md) expressions. Example: `status == 'New' && assignedUserId == null`. 
+It's also possible to define conditions with [Formula](formula.md) expressions. Example: `status == 'New' && assignedUserId == null`.
 
 Conditions in the BPM tool are the same as in the Workflow tool. See more details about [workflow's conditions](workflows.md#conditions).
