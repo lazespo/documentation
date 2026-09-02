@@ -1,6 +1,7 @@
 # Formula > Functions > Env
 
 ## env\userAttribute
+
 `env\userAttribute(ATTRIBUTE)`
 
 Returns ATTRIBUTE of the current user.
