@@ -6,7 +6,7 @@ These instructions are supplementary to the [server configuration](server-config
 
 To install all necessary libraries, run these commands in the terminal:
 
-```
+```bash
 sudo apt-get update
 sudo apt-get install php-mysql php-json php-gd php-zip php-imap php-mbstring php-curl php-exif php-ldap php-xml
 sudo phpenmod imap mbstring
@@ -22,7 +22,7 @@ On a **production** environment, the following configuration is recommended:
 
 Apache config example:
 
-```
+```apache
 DocumentRoot /path_to_espo/public/
 Alias /client/ /path_to_espo/client/
 
@@ -41,7 +41,7 @@ The location of the Apache config is usually `/etc/apache2/apache2.conf` (on Ubu
 
 You need to have **mod_rewrite** enabled. You can do it by running in the terminal:
 
-```
+```bash
 sudo a2enmod rewrite
 sudo service apache2 restart
 ```
@@ -58,7 +58,7 @@ To fix it, try the following steps **one by one**. After each step check if the 
 
 To enable *mod_rewrite*, run these commands in a terminal:
 
-```
+```bash
 sudo a2enmod rewrite
 sudo service apache2 restart
 ```
@@ -73,7 +73,7 @@ To enable .htaccess support, add or edit the server configuration file. It can b
 
 Add the following code:
 
-```
+```apache
 <Directory /PATH_TO_ESPO/>
   AllowOverride All
 </Directory>
@@ -85,7 +85,7 @@ Note: On production, it's reasonable to use  `/PATH_TO_ESPO/public/` path instea
 
 Then restart Apache:
 
-```
+```bash
 sudo service apache2 restart
 ```
 
@@ -93,13 +93,13 @@ sudo service apache2 restart
 
 Open the file `/ESPOCRM_DIRECTORY/api/v1/.htaccess` and replace the following line:
 
-```
+```apache
 # RewriteBase /
 ```
 
 with
 
-```
+```apache
 RewriteBase /REQUEST_URI/api/v1/
 ```
 
@@ -112,7 +112,7 @@ FastCGI does not support HTTP AUTHORIZATION by default. If you use FastCGI, you 
 
 For Fcgid module:
 
-```
+```apache
 <IfModule mod_fcgid.c>
   FcgidPassHeader Authorization
   FcgidPassHeader Proxy-Authorization
@@ -122,7 +122,7 @@ For Fcgid module:
 
 For FastCgi module:
 
-```
+```apache
 <IfModule mod_fastcgi.c>
    FastCgiConfig -pass-header Authorization \
                  -pass-header Proxy-Authorization \
@@ -132,7 +132,7 @@ For FastCgi module:
 
 To check which module is currently being used, run this command and find the module:
 
-```
+```bash
 apache2ctl -M
 ```
 
