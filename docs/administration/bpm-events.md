@@ -87,7 +87,7 @@ Can be used to start processes and event sub-processes.
 
 When it is used to start a process, only *object signals* can be used.
 
-When it is used to start an event sub-process, it is possible to use placeholders in a signal name. Example: `test.{$id}`, {$id} will be replaced with the ID of the target record. 
+When it is used to start an event sub-process, it is possible to use placeholders in a signal name. Example: `test.{$id}`, {$id} will be replaced with the ID of the target record.
 
 !!! note
 
@@ -321,7 +321,6 @@ The error code and the exception message can be obtained further in the flow wit
 
     If the error event is attached to a task with the *Send HTTP Request* action, it is possible to catch a specific response error code (e.g. 404, 403).
 
-
 ### Conditional Intermediate Event (Boundary)
 
 Triggered when specific conditions are met. Note that same non-interrupting events can be triggered multiple times. First, when conditions get fulfilled, then, when conditions get unfulfilled, and so on.
@@ -337,7 +336,6 @@ Triggered when specific conditions are met. Note that same non-interrupting even
 Triggered after a specific period of time. The timer starts once the activity starts.
 
 ![Timer Intermediate Event (Boundary)](https://raw.githubusercontent.com/espocrm/documentation/master/docs/_static/images/administration/bpm/event-intermediate-timer-boundary.png)
-
 
 ### Escalation Intermediate Event (Boundary)
 
@@ -375,4 +373,3 @@ Triggered once compensation is initiated for an activity it is attached to. Must
 When it is a sub-process being compensated, the compensation activity does not have access to the sub-process internal state (called Black-Box compensation). To be able to access the internal state, use the compensation event sub-process inside the sub-process instead.
 
 In case of a multi-instance sub-process, the compensation activity is processed for each completed instance of the sub-process.
-
