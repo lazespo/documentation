@@ -9,7 +9,6 @@ In order to install EspoCRM extension (e.g. Advanced Pack):
 3. Upload your extension package (zip file).
 4. Click Install button.
 
-
 ## Upgrading
 
 In order to upgrade an already installed extension to a newer version:
@@ -50,7 +49,7 @@ When an extension is uninstalled, it is still available in the system. It can be
 
 ### Installing & upgrading
 
-```
+```bash
 php command.php extension --file="path/to/extension/package.zip"
 ```
 
