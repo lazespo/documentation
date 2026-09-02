@@ -16,7 +16,6 @@
 * [string\replace](#stringreplace)
 * [string\split](#stringsplit)
 
-
 ## string\concatenate
 
 `string\concatenate(STRING_1, STRING_2)`
@@ -212,7 +211,6 @@ Replaces all occurrences of SEARCH with REPLACE in STRING.
 !!! note
 
     The REPLACE parameter must be a string. Use [number\format](number.md#numberformat) function to cast an integer or a float to a string.
-
 
 ## string\split
 
