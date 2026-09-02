@@ -56,8 +56,6 @@ There is the ability to specify the default flow. The default flow is chosen whe
 
 If there is a necessity to merge parallel flows produced by a diverging inclusive gateway, you need to use a converging inclusive gateway. It will wait for all incoming flows and only then will continue to the outgoing element.
 
-
-
 !!! note
 
     Diverging and converging gateways must be balanced. The number of flows outgoing from a diverging gateway should equal the number of flows incoming to a converging gateway. If between these gateways one of flows splits into nested parallel flows, these nested flows must be converged before the outer converging gateway. And so on.
