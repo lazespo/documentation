@@ -91,13 +91,13 @@ E.g. `mySignal.{$status}.{$id}` – *status* and *id* are attributes of the targ
 * Prefixed with `@` character.
 * Can be used only to initiate a new process or workflow rule.
 * Can't be caught within a running process.
-* Can be broadcasted by a running process. 
+* Can be broadcasted by a running process.
 
 !!! note
 
     Signal Intermediate Event (Catching) can't catch object signals. 
 
-Example: A process triggers signal *@approve*. A target record of the *Lead* entity type is attached to the signal. You have another BPM flowchart for the *Lead* entity type that starts with the *@approve* signal. In this case, a new process will be started, and the Lead record from the first process will be passed as a target record of the second process. 
+Example: A process triggers signal *@approve*. A target record of the *Lead* entity type is attached to the signal. You have another BPM flowchart for the *Lead* entity type that starts with the *@approve* signal. In this case, a new process will be started, and the Lead record from the first process will be passed as a target record of the second process.
 
 ### Built-in signals
 
@@ -117,7 +117,7 @@ Below is the list of available out-of-the-box signals that are broadcasted in th
 * `@unrelate.LINK_NAME` – record unrelated from another record; the foreign ID is passed in the `id` parameter;
 * `@unrelate.LINK_NAME.FOREIGN_ID`
 
-#### Contacts/Leads:
+#### Contacts/Leads
 
 * `@leadCapture` – when a Lead (or Contact) is processed through the Lead Capture (confirmed opt-in if it's enabled);
 * `@leadCapture.LEAD_CAPTURE_ID`
