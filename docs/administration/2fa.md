@@ -1,6 +1,6 @@
 # 2-Factor Authentication
 
-EspoCRM supports the following 2-factor authentication methods: 
+EspoCRM supports the following 2-factor authentication methods:
 
 * TOTP (as of v5.7)
 * Email (as of v7.0)
