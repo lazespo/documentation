@@ -305,7 +305,6 @@ The following comparison operators are available:
 
     A strict comparison is used. If you compare an int `1` to a float `1.0` with `==` operator, they are treated as not equal. You need to compare values of same types or check whether a value falls within a range with `$a - 0.0001 <= $b && $b <= $a + 0.0001`.
 
-
 ## Examples
 
 !!! example
@@ -497,9 +496,9 @@ The syntax is the same as for the *where* [parameter](../development/api-search-
 
 ## Sandbox
 
-The Formula Sandbox provides the ability to test and debug formula scripts. Available under Administration > Formula Sandbox. 
+The Formula Sandbox provides the ability to test and debug formula scripts. Available under Administration > Formula Sandbox.
 
-Use the function `output\printLine` to print values for debugging purposes. 
+Use the function `output\printLine` to print values for debugging purposes.
 
 You can also utilize the sandbox to run one-time scripts, for example, to modify some data in your system.
 
