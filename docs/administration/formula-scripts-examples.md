@@ -3,7 +3,6 @@
 * [Creating new user](#creating-new-user)
 * [Sending email with generated PDF in attachment](#sending-email-with-generated-pdf-in-attachment)
 
-
 ## Creating new user
 
 ```
