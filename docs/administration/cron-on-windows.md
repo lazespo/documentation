@@ -10,7 +10,7 @@ To setup crontab on Windows system, take the following steps:
 
 2\. Go to the Scheduled Jobs section in the administrator panel (Menu > Administration > Scheduled Jobs) and copy the string for the crontab, replace  `php.exe` instead of `php-cgi.exe` and add `"` symbols to the start and the end of the `php.exe` path. It looks like this one:
 
-```
+```cmd
 "C:\Program Files\PHP\v8.2\php.exe" -f C:\inetpub\wwwroot\733\cron.php
 ```
 
@@ -33,4 +33,3 @@ To setup crontab on Windows system, take the following steps:
 ![IIS Manager](../_static/images/administration/iis/settings.png)
 
 7\. Right-click on the created Task and Click on `Run`.
-
