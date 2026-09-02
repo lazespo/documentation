@@ -213,8 +213,8 @@ Users added as collaborators to a record obtain *read* and *stream* access, prov
 
 Access prerequisites:
 
-- Assignment Permission is required to be able to add a user to collaborators.
-- Edit access to a record is required to be able to add collaborators.
+* Assignment Permission is required to be able to add a user to collaborators.
+* Edit access to a record is required to be able to add collaborators.
 
 ## See also
 
